@@ -1,0 +1,80 @@
+.family-tree {
+  padding: 24px;
+  background: #f0f2f5;
+  min-height: 100vh;
+}
+
+.tree-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 20px 0;
+}
+
+.card-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.children-container {
+  display: flex;
+  gap: 40px;
+  padding-top: 20px;
+  position: relative;
+}
+
+.children-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background: #1890ff;
+  transform: translateX(-50%);
+}
+
+.children-container > .tree-node::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background: #1890ff;
+}
+
+.children-container:not(:has(> .tree-node + .tree-node)) > .tree-node::after {
+  display: none;
+}
+
+.children-container:has(> .tree-node + .tree-node) > .tree-node:first-child::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: calc(50% + 20px);
+  height: 2px;
+  background: #1890ff;
+}
+
+.children-container:has(> .tree-node + .tree-node) > .tree-node:last-child::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: calc(50% + 20px);
+  height: 2px;
+  background: #1890ff;
+}
+
+.children-container:has(> .tree-node + .tree-node) > .tree-node:not(:first-child):not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: calc(100% + 40px);
+  height: 2px;
+  background: #1890ff;
+}
