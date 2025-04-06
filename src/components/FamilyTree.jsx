@@ -5,7 +5,7 @@ import FamilyCard from './FamilyCard';
 import './FamilyTree.css';
 
 const API_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://qinjiapu-3jrvfhaz3-tonys-projects-54021a41.vercel.app/api'
+  ? 'https://qinjiapu-76ncuqntf-tonys-projects-54021a41.vercel.app/api'
   : 'http://localhost:5000/api';
 
 const FamilyTree = () => {
