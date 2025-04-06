@@ -48,6 +48,7 @@ const FamilyTree = () => {
       message.success('添加成功');
     } catch (error) {
       message.error('添加失败');
+    }
   };
 
   const handleEdit = async (updatedMember) => {
@@ -68,6 +69,7 @@ const FamilyTree = () => {
       message.success('更新成功');
     } catch (error) {
       message.error('更新失败');
+    }
   };
 
   const handleDelete = async (memberId) => {
@@ -88,6 +90,7 @@ const FamilyTree = () => {
       message.success('删除成功');
     } catch (error) {
       message.error('删除失败');
+    }
   };
 
   const handleAddChild = async (parentId) => {
@@ -113,6 +116,7 @@ const FamilyTree = () => {
       }
     } catch (error) {
       message.error('添加子成员失败');
+    }
   };
 
   
